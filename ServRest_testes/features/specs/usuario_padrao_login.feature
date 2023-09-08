@@ -10,12 +10,14 @@ Funcionalidade: Login
   Contexto:
     Dado que esteja na tela de login
 
+  @login_invalid_email
   Cenário: Login com e-mail inválido
     Quando preencher usuário com o e-mail sem o @
     E clicar em entrar
     Então o sistema deve exibir msg de erro #"Inclua um "@" no endereço de e-mail"
 
-  Esquema do Cenário: Validar autenticação de usuário 
+  @validate_login_authentication
+  Esquema do Cenário: Validar autenticação de login 
     Quando realizar login e informar os campos "<email>""<senha>"
     Então é exibida mensagem "<msg>"
     Exemplos:

@@ -1,5 +1,6 @@
 #language: pt
 
+@regression
 @registration
 Funcionalidade: Cadastro de usuários
   COMO usuário do sistema

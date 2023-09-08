@@ -1,5 +1,7 @@
 #language: pt
 
+@regression
+@list_products
 Funcionalidade: Pagina Listar Produtos
    SENDO um usuário administrador do ServRest
    QUERO poder cadastrar e personalizar os produtos que irei vender
@@ -11,7 +13,8 @@ Funcionalidade: Pagina Listar Produtos
     E preencher os campos "<nome>""<descrição>""<preço>""<quantidade>"
     E clicar em cadastrar
     E o produto é adicionado a lista de produtos 
-
+  
+  @delete_product_from_list
   Cenário: Excluir produto da lista
     Quando clicar no botao Excluir
     Então o produto é excluido da lista
