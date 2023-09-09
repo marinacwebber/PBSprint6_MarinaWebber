@@ -1,12 +1,20 @@
 Dado('que esteja na página de cadastro') do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+    @cadastro_page = Pages::CadastroPage.new
+    @cadastro_page.load
+end
   
-  Quando('realizar cadastro e informar os campos {string}{string}{string}') do |string, string2, string3|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
-  
-  Então('é exibida mensagem {string}') do |string|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+Quando('realizar cadastro e informar os campos {string}{string}{string}{string}') do |string, string2, string3, string4|
+    @cadastro_page.inp_nome.set string
+    @cadastro_page.inp_email.set string2
+    @cadastro_page.inp_senha.set string3
+    
+    if string4 == 'true'
+    @cadastro_page.check_adm.click
+    end
+    @cadastro_page.btn_cadastrar.click
+end
+ 
+Então('é exibida mensagem {string}') do |mensagem|
+    expect(@cadastro_page).to have_content mensagem
+end
   

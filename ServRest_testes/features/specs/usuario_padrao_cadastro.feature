@@ -1,6 +1,5 @@
 #language: pt
 
-@regression
 @registration
 Funcionalidade: Cadastro de usuários
   COMO usuário do sistema
@@ -12,11 +11,12 @@ Funcionalidade: Cadastro de usuários
 
    @complete_registration
    Esquema do Cenário: Cadastro de usuário completo
-      Quando realizar cadastro e informar os campos "<nome>""<email>""<senha>"
+      Quando realizar cadastro e informar os campos "<nome>""<email>""<senha>""<administrador>"
       Então é exibida mensagem "<msg>"
       Exemplos:
-      |  nome            |    email        |  senha  |        msg                        | 
-      |                  | teste@teste.com |  1234   | Nome não pode ficar em branco     |
-      | Alice            |                 |  1234   | Email não pode ficar em branco    |
-      | Maria            | teste@gmail.com |         | Password não pode ficar em branco |
-      | Fulano da Silva  | fulano@qa.com   |  teste  | Este email já está sendo usado    |
+      |  nome            |    email        |  senha  | administrador |        msg                        | 
+      |                  | teste@teste.com |  1234   |   false       | Nome não pode ficar em branco     |
+      | Lais Indi        |                 |  1234   |   false       | Email é obrigatório               |
+      | Maria            | teste@gmail.com |         |   true        | Password não pode ficar em branco |
+      | Fulano da Silva  | fulano@qa.com   |  teste  |   false       | Este email já está sendo usado    |
+      | Paulo Lopes      | paulo@teste.com |  1234   |   false       |                                   |

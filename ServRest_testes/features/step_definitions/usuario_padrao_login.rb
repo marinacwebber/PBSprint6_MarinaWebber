@@ -11,13 +11,4 @@ end
 
 Então('o sistema deve exibir {string}') do |mensagem|
   expect(@login_page).to have_content mensagem
-end
-  
-  Quando('realizar login e informar os campos {string}{string}') do |string, string2|
-
-  end
-  
-  Então('é exibida mensagem {string}@{string}') do |string, string2|
- 
-  end
-  
+end  
