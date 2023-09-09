@@ -13,8 +13,7 @@ Funcionalidade: Login
   @login_invalid_email
   Cenário: Login com e-mail inválido
     Quando preencher usuário com o e-mail sem o @
-    E clicar em entrar
-    Então o sistema deve exibir msg de erro #"Inclua um "@" no endereço de e-mail"
+    Então o sistema deve exibir msg de erro 
 
   @validate_login_authentication
   Esquema do Cenário: Validar autenticação de login 
