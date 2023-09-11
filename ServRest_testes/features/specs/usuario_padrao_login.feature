@@ -20,3 +20,8 @@ Funcionalidade: Login
       |                 |  1234   | Email é obrigatório                |
       | teste@gmail.com |         | Password não pode ficar em branco  |
       | fulano@qa.com   |  teste  |                                    |
+
+  @to_access_home
+  Cenário: Login para acessar pagina home
+    Quando o usuário preencher os campos de email e senha
+    Então devera ser direcionado para a home

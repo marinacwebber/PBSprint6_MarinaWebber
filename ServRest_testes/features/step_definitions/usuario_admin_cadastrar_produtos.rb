@@ -1,20 +1,31 @@
-Dado('que esteja na página na home do administrador') do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+Dado('que esteja na pagina home apos ter logado em sua conta') do
+  steps %{
+      Dado que esteja na tela de login
+      Quando o usuário preencher os campos de email e senha
+      Então devera ser direcionado para a home
+  }
+end 
+
+Quando('clicar em cadastrar produto') do
+  @home_page.btn_cadastrar.click  
+  @register_products = Pages::RegisterProductsPage.new
+  # expect(@register_products).to have_current_path('/admin/home')
+end
   
-  Quando('clicar em cadastrar produto') do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
-  
-  Quando('preencher os campos {string}{string}{string}{string}') do |string, string2, string3, string4|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
-  
-  Quando('clicar em cadastrar') do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
-  
-  Então('o produto é adicionado a lista de produtos') do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+Quando('preencher os campos {string}{string}{string}{string}') do |string, string2, string3, string4|
+  @register_products.inp_nome_product.set string
+  @register_products.inp_preco_product.set string2
+  @register_products.txt_descript_product.set string3
+  @register_products.inp_amount_product.set string4
+  @register_products.btn_cadastrar_product.click
+end
+
+Então('o sistema devera exibir uma {string}') do |mensagem|
+  expect(@register_products).to have_content mensagem
+end
+
+
+# Então('o sistema devera exibir uma {mensagem}') do |mensagem|
+#   expect(@register_products).to have_content mensagem
+# end
   

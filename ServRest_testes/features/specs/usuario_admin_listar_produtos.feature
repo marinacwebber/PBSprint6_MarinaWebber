@@ -1,21 +1,20 @@
 #language: pt
 
-@regression
 @list_products
 Funcionalidade: Pagina Listar Produtos
    SENDO um usuário administrador do ServRest
-   QUERO poder cadastrar e personalizar os produtos que irei vender
-   PARA que os compradores tenham uma melhor experiência de compra
+   QUERO poder interagir com as diversas opções da pagina lista de produtos
+   PARA que possa ter uma melhor experiência
 
-  Contexto: Estar na página de Cadastro de produtos
-    Dado que esteja na página na home do administrador
-    Quando clicar em cadastrar produto
-    E preencher os campos "<nome>""<descrição>""<preço>""<quantidade>"
-    E clicar em cadastrar
-    E o produto é adicionado a lista de produtos 
+  Contexto: 
+    Dado que esteja na pagina home apos ter logado em sua conta
+  
+  Cenario: Lista de produtos
+    Quando clicar em lista de produtos
+    Então devera aparecer os produtos da lista
   
   @delete_product_from_list
   Cenário: Excluir produto da lista
     Quando clicar no botao Excluir
-    Então o produto é excluido da lista
+    Então o produto eh excluido da lista
 
