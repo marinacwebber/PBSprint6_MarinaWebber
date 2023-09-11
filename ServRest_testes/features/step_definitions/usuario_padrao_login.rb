@@ -14,7 +14,7 @@ Então('o sistema deve exibir {string}') do |mensagem|
 end  
 
 Dado('o usuário preencher os campos de email e senha') do
-  @login_page.input_email.set 'fulano@qa.com'
+  @login_page.input_email.set 'beltrano@qa.com.br'
   @login_page.input_senha.set 'teste'
   @login_page.btn_login.click
 end

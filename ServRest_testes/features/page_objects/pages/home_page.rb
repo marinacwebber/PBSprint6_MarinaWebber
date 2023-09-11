@@ -4,7 +4,6 @@ module Pages
      class HomePage < SitePrism::Page
         set_url '/admin/home'
         element :btn_cadastrar, 'a[data-testid="cadastrarProdutos"]'
-      #   sections :products, Sections::Products, ''
-       
+        element :btn_listar, 'a[data-testid="listarProdutos"]'      
      end
 end

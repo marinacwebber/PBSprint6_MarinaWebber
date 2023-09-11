@@ -20,4 +20,5 @@ Cenário: Cadastro de produtos
     | Borracha             |         |  borracha    |  150         |  Preco é obrigatório                    |
     | Caneta               |  30     |  caneta esf  |  -2          |  Quantidade deve ser maior ou igual a 0 |
     | Logitech MX Vertical |  30     |  Logitech    |  10          |  Já existe produto com esse nome        |
+    | Caderno              |  23     |  Caderno     |  50          |                                         |
     

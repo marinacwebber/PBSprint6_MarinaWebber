@@ -8,8 +8,7 @@ end
 
 Quando('clicar em cadastrar produto') do
   @home_page.btn_cadastrar.click  
-  @register_products = Pages::RegisterProductsPage.new
-  # expect(@register_products).to have_current_path('/admin/home')
+  @register_products = Pages::RegisterProductsPage.new 
 end
   
 Quando('preencher os campos {string}{string}{string}{string}') do |string, string2, string3, string4|
@@ -24,8 +23,4 @@ Então('o sistema devera exibir uma {string}') do |mensagem|
   expect(@register_products).to have_content mensagem
 end
 
-
-# Então('o sistema devera exibir uma {mensagem}') do |mensagem|
-#   expect(@register_products).to have_content mensagem
-# end
   
