@@ -9,7 +9,7 @@ end
   
 Quando('clicar no botao Excluir') do
     @list_before = @list_products.list_pag_products
-    @list_products.btn_danger[3].click
+    @list_products.btn_danger[4].click
 end
 
 Então('o produto eh excluido da lista') do

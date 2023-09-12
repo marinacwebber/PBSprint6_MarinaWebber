@@ -1,5 +1,3 @@
-require_relative '../sections/products'
-
 module Pages
      class RegisterProductsPage < SitePrism::Page
         set_url '/admin/cadastrarprodutos'

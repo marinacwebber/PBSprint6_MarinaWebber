@@ -17,4 +17,12 @@ end
 Então('é exibida mensagem {string}') do |mensagem|
     expect(@cadastro_page).to have_content mensagem
 end
+
+Quando('preencher os campos nome, email, senha e administrador') do
+    @cadastro_page.inp_nome.set  'Testadora'
+    @cadastro_page.inp_email.set 'rgnbfa@teste.com'
+    @cadastro_page.inp_senha.set 'teste123'
+    @cadastro_page.check_adm
+    @cadastro_page.btn_cadastrar.click
+end
   

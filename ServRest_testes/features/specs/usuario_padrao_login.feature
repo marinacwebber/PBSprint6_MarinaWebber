@@ -19,9 +19,14 @@ Funcionalidade: Login
       | teste@testecom     |  1234   | Email deve ser um email válido     |
       |                    |  1234   | Email é obrigatório                |
       | teste@gmail.com    |         | Password não pode ficar em branco  |
-      | beltrano@qa.com.br |  teste  |                                    |
+      | fulano@qa.com      |  teste  |                                    |
+
+  @to_access_home_admin
+  Cenário: Login para acessar pagina home administrador
+    Quando o usuário administrador preencher os campos de email e senha
+    Então devera ser direcionado para a home
 
   @to_access_home
-  Cenário: Login para acessar pagina home
-    Quando o usuário preencher os campos de email e senha
-    Então devera ser direcionado para a home
+  Cenário: Login para acessar pagina home padrao
+    Quando o usuario padrao preencher os campos de email e senha
+    Então devera ser direcionado para a home padrao

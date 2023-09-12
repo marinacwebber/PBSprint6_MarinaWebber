@@ -16,7 +16,12 @@ Funcionalidade: Cadastro de usuários
       Exemplos:
       |  nome            |    email        |  senha  | administrador |        msg                        | 
       |                  | teste@teste.com |  1234   |   false       | Nome não pode ficar em branco     |
-      | Douglas          | gla@teste.com   |  1234   |   false       | Cadastro realizado com sucesso    |
+      | Mari             | mario@teste.com |  1234   |   false       | Cadastro realizado com sucesso    |
       | Lais Indi        |                 |  1234   |   false       | Email é obrigatório               |
       | Maria            | teste@gmail.com |         |   true        | Password não pode ficar em branco |
       | Fulano da Silva  | fulano@qa.com   |  teste  |   false       | Este email já está sendo usado    |
+
+   @register_user
+   Cenário: Cadastro de um usuário padrão
+   Quando preencher os campos nome, email, senha e administrador
+   Então devera ser direcionado para a home padrao

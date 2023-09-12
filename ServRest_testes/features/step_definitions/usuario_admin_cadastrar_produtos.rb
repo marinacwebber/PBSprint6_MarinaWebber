@@ -1,7 +1,7 @@
 Dado('que esteja na pagina home apos ter logado em sua conta') do
   steps %{
       Dado que esteja na tela de login
-      Quando o usuário preencher os campos de email e senha
+      Quando o usuário administrador preencher os campos de email e senha      
       Então devera ser direcionado para a home
   }
 end 
