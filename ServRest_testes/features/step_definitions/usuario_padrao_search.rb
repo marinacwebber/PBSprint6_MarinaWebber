@@ -12,13 +12,13 @@ Quando('realizar uma busca por um produto existente') do
     @search_results = Pages::HomestandardPage.new
 end
 
-Então('deverao ser retornados resultados na busca') do
-    expect(@search_results).to have_products
-    expect(@search_results.products.first.all_there?).to be_truthy
-end
-
 Quando('buscar pelo produto {string}') do |product|
     @home_standard_page.search_for(product)
     @search_results = Pages::HomestandardPage.new    
+end  
+
+Então('deverao ser retornados resultados na busca') do
+    expect(@search_results).to have_products
+    expect(@search_results.products.first.all_there?).to be_truthy
+    sleep 3
 end
-  

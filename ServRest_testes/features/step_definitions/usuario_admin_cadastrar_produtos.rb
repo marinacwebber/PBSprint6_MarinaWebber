@@ -21,6 +21,7 @@ end
 
 Então('o sistema devera exibir uma {string}') do |mensagem|
   expect(@register_products).to have_content mensagem
+  sleep 3
 end
 
   

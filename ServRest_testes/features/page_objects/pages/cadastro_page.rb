@@ -8,5 +8,10 @@ module Pages
         element :inp_senha, 'input[data-testid="password"]'
         element :check_adm, 'input[data-testid="checkbox"]'
         element :btn_cadastrar, 'button[data-testid="cadastrar"]'
+
+        def register_user(generate_registration)
+            
+        
+        end
     end    
 end

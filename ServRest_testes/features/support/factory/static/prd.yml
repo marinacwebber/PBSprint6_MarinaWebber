@@ -2,3 +2,11 @@ valid_product: 'Samsung 60 polegadas'
 user_for_login:
   email: 'teste@compass.com'
   senha: '1234&'
+
+login_for_admin: 
+  :email_admin: 'beltrano@qa.com.br'
+  :senha_admin: 'teste'
+
+login_for_standard:
+  :email_standard: 'zteste@teste.com'
+  :senha_standard: 'teste'

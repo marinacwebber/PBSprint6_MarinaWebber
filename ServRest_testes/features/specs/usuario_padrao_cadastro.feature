@@ -14,12 +14,12 @@ Funcionalidade: Cadastro de usuários
       Quando realizar cadastro e informar os campos "<nome>""<email>""<senha>""<administrador>"
       Então é exibida mensagem "<msg>"
       Exemplos:
-      |  nome            |    email        |  senha  | administrador |        msg                        | 
-      |                  | teste@teste.com |  1234   |   false       | Nome não pode ficar em branco     |
-      | Mari             | ree@teste.com   |  1234   |   false       | Cadastro realizado com sucesso    |
-      | Lais Indi        |                 |  1234   |   false       | Email é obrigatório               |
-      | Maria            | teste@gmail.com |         |   true        | Password não pode ficar em branco |
-      | Fulano da Silva  | fulano@qa.com   |  teste  |   false       | Este email já está sendo usado    |
+      |  nome   |    email        | senha  | administrador |        msg                        | 
+      |         | teste@teste.com | ??     |   false       | Nome não pode ficar em branco     |
+      | ??      | mapma@teste.com | ??     |   false       | Cadastro realizado com sucesso    |
+      | ??      |                 | ??     |   false       | Email é obrigatório               |
+      | ??      | teste@gmail.com |        |   true        | Password não pode ficar em branco |
+      | ??      | fulano@qa.com   | ??     |   false       | Este email já está sendo usado    |
 
    @register_user
    Cenário: Cadastro de um usuário padrão

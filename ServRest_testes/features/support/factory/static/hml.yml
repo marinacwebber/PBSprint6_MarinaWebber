@@ -2,3 +2,7 @@ valid_product: 'Logitech MX Vertical'
 user_for_login:
   email: 'testehml@compass.com'
   senha: '1234&'
+
+login_for_admin: 
+  :email_admin: 'beltrano@qa.com.br'
+  :senha_admin: 'teste'

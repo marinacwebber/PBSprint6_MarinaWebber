@@ -22,4 +22,4 @@ Cenário: Limpar a lista de compra
 @add_to_card
 Cenário: Adicionar as compras ao carrinho
   Quando clica em acidionar no carrinho 
-  Então o usuario pe direcionado para a pagina do carrinho
+  Então o usuario e direcionado para a pagina do carrinho
