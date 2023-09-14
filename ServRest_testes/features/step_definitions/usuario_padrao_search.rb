@@ -7,13 +7,14 @@ Dado('que tenha realizado login e esteja na home de usuario padrao') do
 end 
 
 Quando('realizar uma busca por um produto existente') do
-   @home_standard_page.search_for('Logitech')
-   @search_results = Pages::HomestandardPage.new
+    product_for_search = Factory::Static.static_data('valid_product')
+    @home_standard_page.search_for(product_for_search)
+    @search_results = Pages::HomestandardPage.new
 end
 
 Então('deverao ser retornados resultados na busca') do
-   expect(@search_results).to have_products
-   expect(@search_results.products.first.all_there?).to be_truthy
+    expect(@search_results).to have_products
+    expect(@search_results.products.first.all_there?).to be_truthy
 end
 
 Quando('buscar pelo produto {string}') do |product|

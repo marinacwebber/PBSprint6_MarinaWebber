@@ -25,7 +25,7 @@ Então('devera ser direcionado para a home') do
 end
 
 Quando('o usuario padrao preencher os campos de email e senha') do
-  @login_page.input_email.set 'usuariopadrao@teste.com'
+  @login_page.input_email.set 'zteste@teste.com'
   @login_page.input_senha.set 'teste'
   @login_page.btn_login.click
 end

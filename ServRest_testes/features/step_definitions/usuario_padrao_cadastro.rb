@@ -20,9 +20,12 @@ end
 
 Quando('preencher os campos nome, email, senha e administrador') do
     @cadastro_page.inp_nome.set  'Testadora'
-    @cadastro_page.inp_email.set 'rgnbfa@teste.com'
+    @cadastro_page.inp_email.set 'rop@teste.com'
     @cadastro_page.inp_senha.set 'teste123'
     @cadastro_page.check_adm
     @cadastro_page.btn_cadastrar.click
 end
-  
+# generate_registration = Factory::Dynamic.user_for_registering
+# @cadastro_page.inp_nome.set generate_registration[:name]
+# @cadastro_page.inp_email.set generate_registration[:email]
+# @cadastro_page.inp_senha.set generate_registration[:senha]
