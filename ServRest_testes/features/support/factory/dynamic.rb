@@ -5,7 +5,7 @@ module Factory
         def self.user_for_registering
             {
                 nome: Faker::Name.name,
-                email: Faker::Internet.email,
+                email: Faker::Internet.safe_email,
                 senha: Faker::Internet.password
             }
         end

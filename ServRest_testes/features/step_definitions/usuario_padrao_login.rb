@@ -11,7 +11,6 @@ end
 
 Então('o sistema deve exibir {string}') do |mensagem|
   expect(@login_page).to have_content mensagem
-  sleep 3
 end  
 
 Dado('o usuário administrador preencher os campos de email e senha') do
@@ -22,7 +21,6 @@ end
 Então('devera ser direcionado para a home') do
   @home_page = Pages::HomePage.new
   expect(@home_page).to have_current_path('/admin/home')
-  sleep 3
 end
 
 Quando('o usuario padrao preencher os campos de email e senha') do
@@ -33,5 +31,4 @@ end
 Então('devera ser direcionado para a home padrao') do
   @home_standard_page = Pages::HomestandardPage.new
   expect(@home_standard_page).to have_current_path('/home')
-  sleep 3
 end

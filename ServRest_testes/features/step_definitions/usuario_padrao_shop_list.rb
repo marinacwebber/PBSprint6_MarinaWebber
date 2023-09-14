@@ -14,7 +14,6 @@ end
   
 Então('devera aumentar a quantidade exibida na lista de compras') do
     expect(@shop_list.shoplist.first.total).not_to eql @valor_inicial
-    sleep 3
 end
   
 Dado('que esteja na pagina lista de compras depois de ter adicionado um produto') do
@@ -32,7 +31,6 @@ end
 Então('a lista de compras fica vazia') do
     #expect(@shop_list.shoplist).to be_empty
     expect(@shop_list.btn_empty.text).to include('Seu carrinho está vazio')
-    sleep 3
 end
 
 Quando('clica em acidionar no carrinho') do
@@ -42,7 +40,6 @@ end
 Então('o usuario e direcionado para a pagina do carrinho') do
     @card_page = Pages::CardPage.new
     expect(@card_page.text_aguarde).to have_text('Em construção aguarde')
-    sleep 3
 end
   
   

@@ -20,5 +20,4 @@ end
 Então('deverao ser retornados resultados na busca') do
     expect(@search_results).to have_products
     expect(@search_results.products.first.all_there?).to be_truthy
-    sleep 3
 end

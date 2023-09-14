@@ -16,7 +16,7 @@ Funcionalidade: Cadastro de usuários
       Exemplos:
       |  nome   |    email        | senha  | administrador |        msg                        | 
       |         | teste@teste.com | ??     |   false       | Nome não pode ficar em branco     |
-      | ??      | mapma@teste.com | ??     |   false       | Cadastro realizado com sucesso    |
+      | ??      | ??              | ??     |   false       | Cadastro realizado com sucesso    |
       | ??      |                 | ??     |   false       | Email é obrigatório               |
       | ??      | teste@gmail.com |        |   true        | Password não pode ficar em branco |
       | ??      | fulano@qa.com   | ??     |   false       | Este email já está sendo usado    |

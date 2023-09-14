@@ -5,7 +5,6 @@ end
 
 Então('devera aparecer os produtos da lista') do 
     expect(@list_products).to have_list_pag_products
-    sleep 3
 end
   
 Quando('clicar no botao Excluir') do
@@ -15,5 +14,4 @@ end
 
 Então('o produto eh excluido da lista') do
     expect(@list_products.list_pag_products.size).not_to eql @list_before
-    sleep 3
 end  
