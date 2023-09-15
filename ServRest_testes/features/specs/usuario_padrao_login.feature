@@ -16,7 +16,7 @@ Funcionalidade: Login
 
       Exemplos:
       |  email        | senha |        msg                         | 
-      |  ??           |  ??   | Email deve ser um email válido     |
+      |  ?            |  ??   | Email deve ser um email válido     |
       |               |  ??   | Email é obrigatório                |
       |  ??           |       | Password não pode ficar em branco  |
 
