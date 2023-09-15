@@ -4,8 +4,18 @@ Dado('que esteja na tela de login') do
 end
   
 Quando('preencher os campos {string}{string}') do |campo1, campo2|
-  @login_page.input_email.set campo1
-  @login_page.input_senha.set campo2
+  generate_login = Factory::Dynamic.user_for_registering
+  if campo1 == '??'
+    @login_page.input_email.set generate_login[:e_mail]
+  else
+    @login_page.input_email.set campo1
+  end
+
+  if campo2 == '??'
+    @login_page.input_senha.set generate_login[:senha]
+  else
+    @login_page.input_senha.set campo2
+  end
   @login_page.btn_login.click
 end
 

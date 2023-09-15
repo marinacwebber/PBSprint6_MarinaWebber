@@ -5,6 +5,7 @@ end
   
 Quando('realizar cadastro e informar os campos {string}{string}{string}{string}') do |string, string2, string3, string4|
     generate_registration = Factory::Dynamic.user_for_registering
+    admin = Factory::Static.static_data('login_for_admin')
     if string == '??'
        @cadastro_page.inp_nome.set generate_registration[:nome]
     else
@@ -13,6 +14,8 @@ Quando('realizar cadastro e informar os campos {string}{string}{string}{string}'
 
     if string2 == '??'
         @cadastro_page.inp_email.set generate_registration[:email]
+    elsif string2 == '???'
+        @cadastro_page.inp_email.set admin[:email_admin]
     else
         @cadastro_page.inp_email.set string2
     end
@@ -24,9 +27,9 @@ Quando('realizar cadastro e informar os campos {string}{string}{string}{string}'
     end
 
     if string4 == 'true'
-    @cadastro_page.check_adm.click
+        @cadastro_page.check_adm.click
     end
-    @cadastro_page.btn_cadastrar.click
+        @cadastro_page.btn_cadastrar.click
 end
  
 Quando('preencher os campos nome, email, senha e administrador') do

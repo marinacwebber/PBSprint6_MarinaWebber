@@ -15,11 +15,10 @@ Funcionalidade: Login
       Então o sistema deve exibir "<msg>"
 
       Exemplos:
-      |    email           |  senha  |        msg                         | 
-      | teste@testecom     |  1234   | Email deve ser um email válido     |
-      |                    |  1234   | Email é obrigatório                |
-      | teste@gmail.com    |         | Password não pode ficar em branco  |
-      | fulano@qa.com      |  teste  |                                    |
+      |  email        | senha |        msg                         | 
+      |  ??           |  ??   | Email deve ser um email válido     |
+      |               |  ??   | Email é obrigatório                |
+      |  ??           |       | Password não pode ficar em branco  |
 
   @to_access_home_admin
   Cenário: Login para acessar pagina home administrador

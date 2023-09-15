@@ -6,6 +6,7 @@ module Factory
             {
                 nome: Faker::Name.name,
                 email: Faker::Internet.safe_email,
+                e_mail: Faker::Internet.email,
                 senha: Faker::Internet.password
             }
         end
