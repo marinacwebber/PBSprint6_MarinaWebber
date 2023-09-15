@@ -7,7 +7,7 @@ module Pages
         element :inp_search, 'input[data-testid="pesquisar"]'
         element :btn_search, 'button[data-testid="botaoPesquisar"]'
         elements :add_to_shoplist, 'button[data-testid="adicionarNaLista"]'
-        sections :products, Sections::Products, 'section.espacamento div.card'
+        sections :products, Sections::Products, '.espacamento'
 
         def search_for(product)            
             inp_search.click

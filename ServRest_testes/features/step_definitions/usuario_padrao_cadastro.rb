@@ -5,7 +5,6 @@ end
   
 Quando('realizar cadastro e informar os campos {string}{string}{string}{string}') do |string, string2, string3, string4|
     generate_registration = Factory::Dynamic.user_for_registering
-    
     if string == '??'
        @cadastro_page.inp_nome.set generate_registration[:nome]
     else

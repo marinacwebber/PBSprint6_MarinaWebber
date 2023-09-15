@@ -15,10 +15,10 @@ Funcionalidade: Cadastro de usuários
       Então é exibida mensagem "<msg>"
       Exemplos:
       |  nome   |    email        | senha  | administrador |        msg                        | 
-      |         | teste@teste.com | ??     |   false       | Nome não pode ficar em branco     |
+      |         | ??              | ??     |   false       | Nome não pode ficar em branco     |
       | ??      | ??              | ??     |   false       | Cadastro realizado com sucesso    |
       | ??      |                 | ??     |   false       | Email é obrigatório               |
-      | ??      | teste@gmail.com |        |   true        | Password não pode ficar em branco |
+      | ??      | ??              |        |   true        | Password não pode ficar em branco |
       | ??      | fulano@qa.com   | ??     |   false       | Este email já está sendo usado    |
 
    @register_user
