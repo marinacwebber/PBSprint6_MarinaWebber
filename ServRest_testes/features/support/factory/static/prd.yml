@@ -10,3 +10,11 @@ login_for_admin:
 login_for_standard:
   :email_standard: 'zteste@teste.com'
   :senha_standard: 'teste'
+
+register_invalid:
+  :nome_pequeno: 'a'
+  :nome: Ana Silva
+  :email: a1s2d3@teste.com
+  :email_two: t5y6u7@teste.com
+  :senha: 'teste'  
+  :senha_pequena: '1'

@@ -40,3 +40,21 @@ end
 Então('é exibida mensagem {string}') do |mensagem|
     expect(@cadastro_page).to have_content mensagem
 end
+
+Quando('preencho o campo nome incorretamente') do
+    field_name = Factory::Static.static_data('register_invalid')
+    @cadastro_page.small_name(field_name)
+end
+
+Então('e exibida mensagem para que o campo nome seja preenchido corretamente') do
+    expect(@cadastro_page).to have_content 'Digite um nome válido'
+end
+
+Quando('preencher o campo senha com apenas um caractere') do
+    field_password  = Factory::Static.static_data('register_invalid')
+    @cadastro_page.secure_password(field_password)
+end
+
+Então('uma mensagem devera de senha invalida devera ser exibida') do
+    expect(@cadastro_page).to have_content 'Digite uma senha com mais caracteres'
+end

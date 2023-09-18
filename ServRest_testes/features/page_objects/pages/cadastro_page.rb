@@ -14,6 +14,20 @@ module Pages
             inp_email.set generate_registration[:email] 
             inp_senha.set generate_registration[:senha] 
             btn_cadastrar.click
-            end
+        end
+
+        def small_name(field_name)
+            inp_nome.set field_name[:nome_pequeno]
+            inp_email.set field_name[:email]
+            inp_senha.set field_name[:senha]
+            btn_cadastrar.click
+        end
+
+        def secure_password(field_password)
+            inp_nome.set field_password[:nome_pequeno]
+            inp_email.set field_password[:email_two]
+            inp_senha.set field_password[:senha_pequena]
+            btn_cadastrar.click
+        end
     end    
 end
