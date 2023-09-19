@@ -10,12 +10,12 @@ Funcionalidade: Busca
    Dado que tenha realizado login e esteja na home de usuario padrao
 
    @search_for_product
-   Cenário: Buscar por um produto existente
+   Cenário: CT003-001 - Buscar por um produto existente
       Quando realizar uma busca por um produto existente
       Então deverao ser retornados resultados na busca
 
     @search_for_different_products
-    Esquema do Cenário: Buscar por produtos existentes
+    Esquema do Cenário: CT003-002 - Buscar por produtos existentes
       Quando buscar pelo produto "<produto>"
       Então deverao ser retornados resultados na busca
 

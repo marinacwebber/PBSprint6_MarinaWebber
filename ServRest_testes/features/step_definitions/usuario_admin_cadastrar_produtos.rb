@@ -23,4 +23,11 @@ Então('o sistema devera exibir uma {string}') do |mensagem|
   expect(@register_products).to have_content mensagem
 end
 
+Quando('preencher o campo preco com numero decimal') do
+
+end
+
+Então('devera aceitar o valor e cadastrar o produto com sucesso') do
+  
+end
   

@@ -14,7 +14,7 @@ login_for_standard:
 register_invalid:
   :nome_pequeno: 'a'
   :nome: Ana Silva
-  :email: a1s2d3@teste.com
-  :email_two: t5y6u7@teste.com
+  :email: a198d3@teste.com
+  :email_two: t5pou7@teste.com
   :senha: 'teste'  
   :senha_pequena: '1'

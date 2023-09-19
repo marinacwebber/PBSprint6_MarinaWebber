@@ -14,4 +14,12 @@ end
 
 Então('o produto eh excluido da lista') do
     expect(@list_products.list_pag_products.size).not_to eql @list_before
-end  
+end
+
+Quando('clicar em editar') do
+
+end 
+
+Então('devera realizar as alteracoes do produto na pagina de cadastro') do
+    
+end

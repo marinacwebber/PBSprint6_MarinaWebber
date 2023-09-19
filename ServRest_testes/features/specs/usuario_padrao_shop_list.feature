@@ -10,16 +10,16 @@ Contexto: Estar na página lista de compras
   Dado que esteja na pagina lista de compras depois de ter adicionado um produto
 
 @increase_quantity_product
-Cenário: Aumentar a quantidade do produto na lista de compra
+Cenário: CT004-001 - Validação do botão de incremento
   Quando aumentar a quantidade do produto 
   Então devera aumentar a quantidade exibida na lista de compras
 
 @clear_the_list
-Cenário: Limpar a lista de compra
+Cenário: CT004-002 - Limpar a lista de compra
   Quando clica em limpar a lista
   Então a lista de compras fica vazia
 
 @add_to_card
-Cenário: Adicionar as compras ao carrinho
+Cenário: CT004-003 - Adicionar as compras ao carrinho
   Quando clica em acidionar no carrinho 
   Então o usuario e direcionado para a pagina do carrinho
