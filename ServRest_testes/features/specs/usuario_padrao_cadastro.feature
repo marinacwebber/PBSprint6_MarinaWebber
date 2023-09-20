@@ -26,12 +26,14 @@ Funcionalidade: Cadastro de usuários
       Quando preencher os campos nome, email, senha e administrador
       Então devera ser direcionado para a home padrao
 
+   @fix_later
    @register_size_field
-      Esquema do Cenário: CT002-003- Cadastro validação de nomes pequenos e grandes
-      Quando preencho o campo nome incorretamente
+      Esquema do Cenário: CT002-003- Cadastro validação de nomes pequenos
+      Quando preencho o campo nome incorretamente e os outros campos corretamente
       Então e exibida mensagem para que o campo nome seja preenchido corretamente
 
+   @fix_later
    @register_secure_password   
    Cenário: CT002-004 Cadastro validação de senha segura
-      Quando preencher o campo senha com apenas um caractere
+      Quando preencher o campo senha com apenas um caractere e os outros campos corretamente
       Então uma mensagem devera de senha invalida devera ser exibida

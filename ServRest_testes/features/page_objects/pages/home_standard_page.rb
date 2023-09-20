@@ -8,6 +8,7 @@ module Pages
         element :btn_search, 'button[data-testid="botaoPesquisar"]'
         elements :add_to_shoplist, 'button[data-testid="adicionarNaLista"]'
         sections :products, Sections::Products, '.espacamento'
+        element :txt_home, '.jumbotron h1'
 
         def search_for(product)            
             inp_search.click

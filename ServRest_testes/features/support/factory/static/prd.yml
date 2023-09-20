@@ -3,8 +3,9 @@ user_for_login:
   email: 'teste@compass.com'
   senha: '1234&'
 
-login_for_admin: 
-  :email_admin: 'beltrano@qa.com.br'
+login_for_admin:
+  :nome_admin: 'beltrano'
+  :email_admin: 'beltrano@qa.com'
   :senha_admin: 'teste'
 
 login_for_standard:
@@ -14,7 +15,7 @@ login_for_standard:
 register_invalid:
   :nome_pequeno: 'a'
   :nome: Ana Silva
-  :email: a198d3@teste.com
-  :email_two: t5pou7@teste.com
+  :email: a1@teste.com
+  :email_two: a2@teste.com
   :senha: 'teste'  
   :senha_pequena: '1'

@@ -7,15 +7,6 @@ Quando('acessar a pagina lista de compras') do
     @shop_list.load
 end
 
-Quando('aumentar a quantidade do produto') do
-    @valor_inicial = @shop_list.shoplist.first.total
-    @shop_list.shoplist.first.aumentar_quantidade.click
-end
-  
-Então('devera aumentar a quantidade exibida na lista de compras') do
-    expect(@shop_list.shoplist.first.total).not_to eql @valor_inicial
-end
-  
 Dado('que esteja na pagina lista de compras depois de ter adicionado um produto') do
   steps %{
      Dado que tenha realizado login e esteja na home de usuario padrao
@@ -24,13 +15,22 @@ Dado('que esteja na pagina lista de compras depois de ter adicionado um produto'
   }
 end
 
+Quando('aumentar a quantidade do produto') do
+    @valor_inicial = @shop_list.shoplist.first.total
+    @shop_list.shoplist.first.aumentar_quantidade.click
+end
+  
+Então('devera aumentar a quantidade exibida na lista de compras') do
+    expect(@shop_list.shoplist.first.total).not_to eql @valor_inicial
+end  
+
 Quando('clica em limpar a lista') do
     @shop_list.btn_limpar_lista.click
 end
-  
+
 Então('a lista de compras fica vazia') do
-    #expect(@shop_list.shoplist).to be_empty
-    expect(@shop_list.btn_empty.text).to include('Seu carrinho está vazio')
+    expect(@shop_list.txt_empty).to be_visible 
+    expect(@shop_list.txt_empty.text).to include('Seu carrinho está vazio')
 end
 
 Quando('clica em acidionar no carrinho') do
@@ -39,7 +39,6 @@ end
   
 Então('o usuario e direcionado para a pagina do carrinho') do
     @card_page = Pages::CardPage.new
-    expect(@card_page.text_aguarde).to have_text('Em construção aguarde')
-end
-  
-  
+    expect(@card_page.text_aguarde).to be_visible
+    expect(@card_page).to have_current_path('/carrinho')
+end  

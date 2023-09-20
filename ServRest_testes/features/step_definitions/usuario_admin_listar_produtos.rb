@@ -9,7 +9,7 @@ end
   
 Quando('clicar no botao Excluir') do
     @list_before = @list_products.list_pag_products
-    @list_products.btn_danger[4].click
+    @list_products.btn_danger[2].click
 end
 
 Então('o produto eh excluido da lista') do
@@ -17,9 +17,12 @@ Então('o produto eh excluido da lista') do
 end
 
 Quando('clicar em editar') do
-
-end 
-
-Então('devera realizar as alteracoes do produto na pagina de cadastro') do
-    
+    @list_products.list_pag_products.btn_editar[1].click
+    @register_products = Pages::RegisterProductsPage.new
 end
+
+Dado('devera alterar os campos e clicar em cadastrar') do
+    steps %{
+        Quando preencher os campos "<nome>""<preco>""<descricao>""<quantidade>"
+    }
+end 

@@ -6,8 +6,12 @@ module Factory
             {
                 nome: Faker::Name.name,           
                 email: Faker::Internet.safe_email,
-                e_mail: Faker::Internet.email,
                 senha: Faker::Internet.password,
+                produto: Faker::BossaNova.artist,
+                descricao: Faker::Lorem.sentence,
+                preco: Faker::Commerce.price(range: 1..10),
+                quantidade: Faker::Bank.account_number(digits: 4),
+                preco_decimal: Faker::Commerce.price
             }
         end
     end

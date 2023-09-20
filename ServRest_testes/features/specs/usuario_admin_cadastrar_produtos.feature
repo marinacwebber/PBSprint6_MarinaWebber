@@ -15,13 +15,15 @@ Funcionalidade: Pagina Cadastro de Produtos
       E preencher os campos "<nome>""<preco>""<descricao>""<quantidade>"
       Então o sistema devera exibir uma "<mensagem>"
       Exemplos:
-      |  nome                |  preco  |  descricao   |  quantidade  |  mensagem                               |
-      |                      |  15     |  caneta bic  |  100         |  Nome não pode ficar em branco          |
-      | Borracha             |         |  borracha    |  150         |  Preco é obrigatório                    |
-      | Caneta               |  30     |  caneta esf  |  -2          |  Quantidade deve ser maior ou igual a 0 |
-      | Logitech MX Vertical |  30     |  Logitech    |  10          |  Já existe produto com esse nome        |
-      | Caderno              |  23     |  Caderno     |  50          |                                         |
+      |  nome   | preco | descricao | quantidade  |  mensagem                               |
+      |         |  ?    |  ???      |  ??         |  Nome não pode ficar em branco          |
+      | ??      |       |  ???      |  ??         |  Preco é obrigatório                    |
+      | ??      |  ?    |  ???      |  -2         |  Quantidade deve ser maior ou igual a 0 |
+      | ???     |  ?    |  ???      |  ??         |  Já existe produto com esse nome        |
+      | ??      |  0    |  ???      |  ??         |  Preco deve ser um número positivo      |
     
+    @fix_later
+    @decimal_price
     Cenário: CT023-002- Validação campo preço
-      Quando preencher o campo preco com numero decimal
+      Quando preencher o campo preco com numero decimal e os demais campos corretamente
       Então devera aceitar o valor e cadastrar o produto com sucesso

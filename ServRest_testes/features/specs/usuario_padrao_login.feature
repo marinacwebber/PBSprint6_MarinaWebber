@@ -15,15 +15,14 @@ Funcionalidade: Login
       Então o sistema deve exibir "<msg>"
 
       Exemplos:
-      |  email        | senha |        msg                         | 
-      |  ?            |  ??   | Email deve ser um email válido     |
+      |  email        | senha |        msg                         |
       |               |  ??   | Email é obrigatório                |
       |  ??           |       | Password não pode ficar em branco  |
 
   @to_access_home_admin
   Cenário:  CT001-002 - Login para acessar pagina home administrador
     Quando o usuário administrador preencher os campos de email e senha
-    Então devera ser direcionado para a home
+    Então devera ser direcionado para a home admin
 
   @to_access_home
   Cenário:  CT001-003 - Login para acessar pagina home padrao

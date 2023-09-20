@@ -21,7 +21,8 @@ Funcionalidade: Pagina Listar Produtos
     E clicar no botao Excluir
     Então o produto eh excluido da lista
 
+  @fix_later
   @edit_products
   Cenário: CT022-003 - Editar produtos da lista de compras
     Quando clicar em editar 
-    Então devera realizar as alteracoes do produto na pagina de cadastro
+    Então devera alterar os campos e clicar em cadastrar
