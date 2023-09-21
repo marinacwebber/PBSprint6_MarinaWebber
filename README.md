@@ -1,4 +1,4 @@
-[![Issues](https://img.shields.io/github/workflow/status/marinacwebber/PBSprint6_MarinaWebber/issues?label=GitHub%20Actions&logo=github-actions&style=flat-square)](https://github.com/marinacwebber/PBSprint6_MarinaWebber/issues)
+[!Issues](https://github.com/marinacwebber/PBSprint6_MarinaWebber/issues)
 ## Sprint 6 - ServRest Test Automation
 
 ## Sobre o Projeto 🚀
