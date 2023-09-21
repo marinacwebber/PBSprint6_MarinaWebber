@@ -1,4 +1,4 @@
-[![GitHub Actions](https://img.shields.io/github/workflow/status/marinacwebber/PBSprint6_MarinaWebber/issues?label=GitHub%20Actions&logo=github-actions&style=flat-square)](https://github.com/marinacwebber/PBSprint6_MarinaWebber/issues)
+[![Issues](https://img.shields.io/github/workflow/status/marinacwebber/PBSprint6_MarinaWebber/issues?label=GitHub%20Actions&logo=github-actions&style=flat-square)](https://github.com/marinacwebber/PBSprint6_MarinaWebber/issues)
 ## Sprint 6 - ServRest Test Automation
 
 ## Sobre o Projeto 🚀
@@ -17,7 +17,7 @@ Antes de mergulhar no projeto, verifique se você já está preparado com as seg
 
 ## Instalação ⚙️
 
-Configurar o ambiente de desenvolvimento e instalar as gemas necessárias listadas no arquivo `Gemfile` e no terminal `bundle instal`.
+Configurar o ambiente de desenvolvimento e instalar as gems necessárias listadas no arquivo `Gemfile` e no terminal `bundle instal`.
 Siga estas etapas para configurar o ambiente e instalar as dependências do projeto.
 
 ## Execução dos Testes 🚀
