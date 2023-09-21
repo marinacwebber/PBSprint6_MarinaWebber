@@ -18,6 +18,6 @@ jobs:
         with:
           ruby-version: '3.2'
       - name: Install dependencies
-        run: bundle install
+        run: (cd ServRest_testes ; bundle install ; cd ..)
       - name: Run tests
-        run: (cd ServRest_testes ; parallel_cucumber -o '-p default --tags "not @fix_later"')
+        run: (cd ServRest_testes ; parallel_cucumber -o '-p default --tags "not @fix_later"'; cd ..)
