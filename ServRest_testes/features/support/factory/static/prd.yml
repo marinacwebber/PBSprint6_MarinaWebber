@@ -4,8 +4,8 @@ user_for_login:
   senha: '1234&'
 
 login_for_admin:
-  :nome_admin: 'beltrano'
-  :email_admin: 'beltrano@qa.com'
+  :nome_admin: 'Fulano da Silva'
+  :email_admin: 'fulano@qa.com'
   :senha_admin: 'teste'
 
 login_for_standard:

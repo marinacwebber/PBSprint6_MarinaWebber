@@ -10,7 +10,7 @@ Funcionalidade: Pagina Cadastro de Produtos
       Dado que esteja na pagina home apos ter logado em sua conta
   
     @product_registration
-    Cenário: CT021-001 - Cadastro de produtos
+    Esquema do Cenário: CT021-001 - Cadastro de produtos
       Quando clicar em cadastrar produto
       E preencher os campos "<nome>""<preco>""<descricao>""<quantidade>"
       Então o sistema devera exibir uma "<mensagem>"
@@ -26,4 +26,4 @@ Funcionalidade: Pagina Cadastro de Produtos
     @decimal_price
     Cenário: CT021-002- Validação campo preço
       Quando preencher o campo preco com numero decimal e os demais campos corretamente
-      Então devera aceitar o valor e cadastrar o produto com sucesso
+      Então devera cadastrar o produto com sucesso

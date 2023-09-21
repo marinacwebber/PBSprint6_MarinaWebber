@@ -1,4 +1,4 @@
-default: --format pretty -p prd -p chrome -p html
+default: --format pretty -p prd -p chrome -p html 
 default_hml: -p hml -p chrome
 
 html: --format html --out=reports/report.html
@@ -9,3 +9,5 @@ prd: ENVIRONMENT="prd"
 chrome: BROWSER="chrome"
 
 headless: HEADLESS="true"
+
+fix_later: --tags @fix_later
