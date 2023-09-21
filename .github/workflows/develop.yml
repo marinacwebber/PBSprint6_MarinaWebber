@@ -20,5 +20,4 @@ jobs:
       - name: Install dependencies
         run: bundle install
       - name: Run tests
-        run: cd ServRest_testes
-        run: parallel_cucumber -o '-p default --tags "not @fix_later"'
+        run: (cd ServRest_testes ; parallel_cucumber -o '-p default --tags "not @fix_later"')
