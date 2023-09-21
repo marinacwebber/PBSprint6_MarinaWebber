@@ -24,6 +24,6 @@ Funcionalidade: Pagina Cadastro de Produtos
     
     @fix_later
     @decimal_price
-    Cenário: CT023-002- Validação campo preço
+    Cenário: CT021-002- Validação campo preço
       Quando preencher o campo preco com numero decimal e os demais campos corretamente
       Então devera aceitar o valor e cadastrar o produto com sucesso
