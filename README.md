@@ -1,4 +1,5 @@
-### Sprint 6 - ServRest Test Automation
+[![GitHub Actions](https://img.shields.io/github/workflow/status/marinacwebber/PBSprint6_MarinaWebber/issues?label=GitHub%20Actions&logo=github-actions&style=flat-square)](https://github.com/marinacwebber/PBSprint6_MarinaWebber/issues)
+## Sprint 6 - ServRest Test Automation
 
 ## Sobre o Projeto 🚀
 O projeto "ServRest Test Automation" é uma atividade de aprendizado de automação de testes desenvolvida como parte do programa de bolsas da Compass. Ele tem como objetivo principal proporcionar uma experiência prática de automação de testes funcionais em um ambiente de desenvolvimento real. Neste projeto, o foco é garantir a qualidade e o desempenho de um website fictício de comércio chamado "ServRest".
