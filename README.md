@@ -24,7 +24,7 @@ Siga estas etapas para configurar o ambiente e instalar as dependências do proj
 
 ## Execução dos Testes 🚀
 
-Para executar todos os testes, utilize o seguinte '1'; para executar um teste específico '2'; excluir testes com uma determinada tag '3'; testes em paralelo(paralelismo) '4'.
+Para executar todos os testes, utilize o seguinte '1' <br>Para executar um teste específico '2' <br>Excluir testes com uma determinada tag '3' <br> Testes em paralelo(paralelismo) '4' <br> Excluir alguma tag do paralelismo '5'
 
 ```shell
 1. bundle exec cucumber -p default
@@ -34,6 +34,9 @@ Para executar todos os testes, utilize o seguinte '1'; para executar um teste es
 3. bundle exec cucumber -p default --tags "not @fix_later"
 
 4. parallel_cucumber
+
+5. parallel_cucumber -o '-p default --tags "not @fix_later"'
+
 ```
 ## Deploy - Realizar Pull Request 🤖
 
