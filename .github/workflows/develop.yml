@@ -13,7 +13,7 @@ jobs:
 
     services:
       browser:
-        image: selenium/standalone-chrome-debug
+        image: selenium/standalone-chrome:latest
         ports:
           - "5900:5900"
           - "4444:4444"
@@ -28,4 +28,4 @@ jobs:
       - name: Install dependencies
         run: (cd ServRest_testes ; bundle install ; cd ..)
       - name: Run tests
-        run: (cd ServRest_testes ; parallel_cucumber -o '-p default --headless --tags "not @fix_later"'; cd ..)
+        run: (cd ServRest_testes ; parallel_cucumber -o '-p default --tags "not @fix_later"'; cd ..)
