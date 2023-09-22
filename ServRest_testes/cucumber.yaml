@@ -1,4 +1,4 @@
-default: --format pretty -p prd -p chrome -p html 
+default: -p prd --headless -p chrome -p html 
 default_hml: -p hml -p chrome
 
 html: --format html --out=reports/report.html
