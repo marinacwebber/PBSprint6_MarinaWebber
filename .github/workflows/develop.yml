@@ -11,15 +11,14 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    services:
-      browser:
-        image: selenium/standalone-chrome:latest
-        ports:
-          - "5900:5900"
-          - "4444:4444"
-
-
     steps:
+      - uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: beta
+        id: setup-chrome
+      - run: |
+          echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
+          ${{ steps.setup-chrome.outputs.chrome-path }} --version
       - uses: actions/checkout@v4
       - name: Set up Ruby
         uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
