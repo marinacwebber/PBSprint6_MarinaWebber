@@ -13,12 +13,8 @@ jobs:
 
     steps:
       - uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: beta
-        id: setup-chrome
+      - name: Install Chrome and Chromedriver
       - run: |
-          sudo apt update
-          sudo apt upgrade -y
           sudo apt install wget
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo dpkg -i google-chrome-stable_current_amd64.deb
@@ -27,7 +23,6 @@ jobs:
           unzip chromedriver_linux64.zip
           chmod +x chromedriver
           sudo mv chromedriver /usr/local/bin
-          ${{ steps.setup-chrome.outputs.chrome-path }} --version
       - uses: actions/checkout@v4
       - name: Set up Ruby
         uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
