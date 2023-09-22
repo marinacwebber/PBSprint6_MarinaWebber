@@ -1,0 +1,25 @@
+name: Pipeline Develop
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1
+      - uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
+        with:
+          ruby-version: '3.2'
+      - name: Install dependencies
+        run: (cd ServRest_testes ; bundle install ; cd ..)
+      - name: Run tests
+        run: (cd ServRest_testes ; parallel_cucumber -o '-p default -p headless -p chrome --tags "not @fix_later"'; cd ..)

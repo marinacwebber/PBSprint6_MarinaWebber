@@ -1,0 +1,21 @@
+valid_product: 'Logitech MX Vertical'
+user_for_login:
+  email: 'teste@compass.com'
+  senha: '1234&'
+
+login_for_admin:
+  :nome_admin: 'Fulano da Silva'
+  :email_admin: 'fulano@qa.com'
+  :senha_admin: 'teste'
+
+login_for_standard:
+  :email_standard: 'zteste@teste.com'
+  :senha_standard: 'teste'
+
+register_invalid:
+  :nome_pequeno: 'a'
+  :nome: Ana Silva
+  :email: a1@teste.com
+  :email_two: a2@teste.com
+  :senha: 'teste'  
+  :senha_pequena: '1'
