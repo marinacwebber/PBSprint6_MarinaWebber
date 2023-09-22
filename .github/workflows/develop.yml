@@ -28,4 +28,4 @@ jobs:
       - name: Install dependencies
         run: (cd ServRest_testes ; bundle install ; cd ..)
       - name: Run tests
-        run: (cd ServRest_testes ; parallel_cucumber -o '-p default headles --tags "not @fix_later"'; cd ..)
+        run: (cd ServRest_testes ; parallel_cucumber -o '-p default --headless --tags "not @fix_later"'; cd ..)
