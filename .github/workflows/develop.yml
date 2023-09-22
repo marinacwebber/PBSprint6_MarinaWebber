@@ -17,7 +17,16 @@ jobs:
           chrome-version: beta
         id: setup-chrome
       - run: |
-          echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
+          sudo apt update
+          sudo apt upgrade -y
+          sudo apt install wget
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i google-chrome-stable_current_amd64.deb
+          LATEST_CHROMEDRIVER_VERSION=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+          wget https://chromedriver.storage.googleapis.com/$LATEST_CHROMEDRIVER_VERSION/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+          chmod +x chromedriver
+          sudo mv chromedriver /usr/local/bin
           ${{ steps.setup-chrome.outputs.chrome-path }} --version
       - uses: actions/checkout@v4
       - name: Set up Ruby
