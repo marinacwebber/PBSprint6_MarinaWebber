@@ -34,6 +34,10 @@ message:
   valid_name: O nome deve ser um nome válido
   password_security: Digite uma senha com mais caracteres
   valid_email: Email deve ser um email válido
+  mandatory_price: Preco é obrigatório
+  quantity_invalid: Quantidade deve ser maior ou igual a 0
+  product_used: Já existe produto com esse nome
+  positive_price: Preco deve ser um número positivo
 
 links:
   default_home: front.serverest.dev/home

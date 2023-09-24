@@ -6,6 +6,7 @@ module Pages
         element :txt_descript_product, 'textarea[data-testid="descricao"]'
         element :inp_amount_product, 'input[data-testid="quantity"]'
         element :btn_register_product, 'button[data-testid="cadastarProdutos"]'
+        element :error_message, '.alert-dismissible'
 
         def register_product name, price, description, quantity
           case name 

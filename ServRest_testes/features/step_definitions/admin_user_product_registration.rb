@@ -15,8 +15,9 @@ Quando('preencher os campos {string}{string}{string}{string}') do |name, price, 
   @register_products.register_product name, price, description, quantity
 end
 
-Então('o sistema devera exibir uma {string}') do |mensagem|
-  expect(@register_products).to have_content mensagem
+Então('o sistema devera exibir uma {string}') do |message|
+  product_message = Factory::Static.static_data('message')[message]
+  expect(@register_products.error_message.has_text? product_message).to be_truthy
 end
 
 Quando('preencher o campo preco com numero decimal e os demais campos corretamente') do

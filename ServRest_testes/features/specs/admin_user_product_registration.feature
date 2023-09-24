@@ -15,12 +15,12 @@ Funcionalidade: Pagina Cadastro de Produtos
       E preencher os campos "<nome>""<preco>""<descricao>""<quantidade>"
       Então o sistema devera exibir uma "<mensagem>"
       Exemplos:
-      |  nome  | preco   | descricao | quantidade|  mensagem                               |
-      | empty  | valid   |  valid    |  valid    |  Nome não pode ficar em branco          |
-      | valid  | empty   |  valid    |  valid    |  Preco é obrigatório                    |
-      | valid  | valid   |  valid    |  invalid  |  Quantidade deve ser maior ou igual a 0 |
-      | used   | valid   |  valid    |  valid    |  Já existe produto com esse nome        |
-      | valid  | invalid |  valid    |  valid    |  Preco deve ser um número positivo      |
+      |  nome  | preco   | descricao | quantidade|  mensagem             |
+      | empty  | valid   |  valid    |  valid    |  blank_name           |
+      | valid  | empty   |  valid    |  valid    |  mandatory_price      |
+      | valid  | valid   |  valid    |  invalid  |  quantity_invalid     |
+      | used   | valid   |  valid    |  valid    |  product_used         |
+      | valid  | invalid |  valid    |  valid    |  positive_price       |
     
     @fix_later
     @decimal_price
