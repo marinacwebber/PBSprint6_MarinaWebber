@@ -1,16 +1,18 @@
 valid_product: 'Logitech MX Vertical'
+valid_product_two: 'Samsung 60 polegadas'
+
 user_for_login:
   email: 'teste@compass.com'
   senha: '1234&'
 
 login_for_admin:
-  :nome_admin: 'Fulano da Silva'
+  :name_admin: 'Fulano da Silva'
   :email_admin: 'fulano@qa.com'
-  :senha_admin: 'teste'
+  :password_admin: 'teste'
 
 login_for_standard:
   :email_standard: 'zteste@teste.com'
-  :senha_standard: 'teste'
+  :password_standard: 'teste'
 
 register_invalid:
   :nome_pequeno: 'a'
@@ -19,3 +21,20 @@ register_invalid:
   :email_two: a2@teste.com
   :senha: 'teste'  
   :senha_pequena: '1'
+  :zero: '0'
+  :negative: '-2'
+  :email_invalid: teste@teste
+
+message:
+  blank_name: Nome não pode ficar em branco
+  registered_successfully: Cadastro realizado com sucesso
+  mandatory_email: Email é obrigatório
+  blank_password: Password não pode ficar em branco
+  email_in_use: Este email já está sendo usado
+  valid_name: O nome deve ser um nome válido
+  password_security: Digite uma senha com mais caracteres
+  valid_email: Email deve ser um email válido
+
+links:
+  default_home: front.serverest.dev/home
+  admin_home: front.serverest.dev/admin/home

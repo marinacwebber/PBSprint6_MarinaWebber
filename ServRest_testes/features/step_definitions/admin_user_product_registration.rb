@@ -11,34 +11,8 @@ Quando('clicar em cadastrar produto') do
   @register_products = Pages::RegisterProductsPage.new
 end
   
-Quando('preencher os campos {string}{string}{string}{string}') do |string, string2, string3, string4|
-  generate_product = Factory::Dynamic.user_for_registering
-  product = Factory::Static.static_data('valid_product')
-  if string == '??'
-    @register_products.inp_nome_product.set generate_product[:produto]
-  elsif string == '???'
-    @register_products.inp_nome_product.set product
-  else
-    @register_products.inp_nome_product.set string
-  end
-
-  if string2 == '?'
-    @register_products.inp_preco_product.set generate_product[:preco]
-  else
-    @register_products.inp_preco_product.set string2
-  end
-
-  if string3 == '???'
-    @register_products.txt_descript_product.set generate_product[:descricao]
-  end
-
-  if string4 == '??'
-    @register_products.inp_amount_product.set generate_product[:quantidade]
-  else
-    @register_products.inp_amount_product.set string4
-  end
-
-  @register_products.btn_cadastrar_product.click
+Quando('preencher os campos {string}{string}{string}{string}') do |name, price, description, quantity|
+  @register_products.register_product name, price, description, quantity
 end
 
 Então('o sistema devera exibir uma {string}') do |mensagem|
