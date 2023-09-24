@@ -1,6 +1,6 @@
 #language: pt
 
-@list_users
+@list_products
 Funcionalidade: Pagina Cadastro de Produtos
    SENDO um usuário administrador do ServRest
    QUERO poder cadastrar e personalizar os produtos que irei vender
@@ -15,12 +15,12 @@ Funcionalidade: Pagina Cadastro de Produtos
       E preencher os campos "<nome>""<preco>""<descricao>""<quantidade>"
       Então o sistema devera exibir uma "<mensagem>"
       Exemplos:
-      |  nome   | preco | descricao | quantidade  |  mensagem                               |
-      |         |  ?    |  ???      |  ??         |  Nome não pode ficar em branco          |
-      | ??      |       |  ???      |  ??         |  Preco é obrigatório                    |
-      | ??      |  ?    |  ???      |  -2         |  Quantidade deve ser maior ou igual a 0 |
-      | ???     |  ?    |  ???      |  ??         |  Já existe produto com esse nome        |
-      | ??      |  0    |  ???      |  ??         |  Preco deve ser um número positivo      |
+      |  nome  | preco   | descricao | quantidade|  mensagem                               |
+      | empty  | valid   |  valid    |  valid    |  Nome não pode ficar em branco          |
+      | valid  | empty   |  valid    |  valid    |  Preco é obrigatório                    |
+      | valid  | valid   |  valid    |  invalid  |  Quantidade deve ser maior ou igual a 0 |
+      | used   | valid   |  valid    |  valid    |  Já existe produto com esse nome        |
+      | valid  | invalid |  valid    |  valid    |  Preco deve ser um número positivo      |
     
     @fix_later
     @decimal_price
